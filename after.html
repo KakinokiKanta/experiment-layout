@@ -21,11 +21,12 @@
         font-size: 30px;
         font-weight: bold;
         overflow: hidden;
+        z-index: 1000;
       "
     >
       <div style="white-space: nowrap">有留大学 受講科目登録システム</div>
-      <!-- <div style="width: fit-content">有留大学</div> -->
-      <div style="padding: 0 630px"></div>
+      <!-- <div style="white-space: nowrap">有留大学</div> -->
+      <div style="padding: 0 620px"></div>
       <nav
         style="
           display: flex;
@@ -111,7 +112,14 @@
             <img src="./kaki.png" alt="アイコン" width="30px" height="30px" />
             <h2 style="position: absolute; left: 20px">お問い合わせフォーム</h2>
           </div>
-          <p></p>
+          <p>
+            お問い合わせする際には、下記項目を必須項目としています。
+            <ul>
+              <li>お名前</li>
+              <li>メールアドレス</li>
+              <li>問い合わせ事項</li>
+            </ul>
+          </p>
           <form action="https://hoge-hoge-hoge.com/ask" method="post">
             <div style="margin: 10px 0">
               <label for="guestname" style="display: block"
