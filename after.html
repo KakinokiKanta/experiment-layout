@@ -3,13 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>レイアウト崩れ</title>
+    <title>ログインフォーム</title>
   </head>
-
-  <body>
-    <main>
-      <section>
-        <div>Hello World!!</div>
+  <body style="background-color: #eee">
+    <main style="width: 100%">
+      <section style="width: 768px; margin: 0 auto">
+        <div
+          style="
+            position: absolute;
+            width: 768px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            background-color: #fff;
+          "
+        >
+          <div style="display: flex; align-items: center">
+            <img src="./kaki.png" alt="アイコン" width="30px" height="30px" />
+            <h2 style="position: absolute; left: 20px">ログインフォーム</h2>
+          </div>
+          <form action="https://hoge-hoge-hoge.com" method="post">
+            <div style="margin: 10px 0">
+              <label for="username" style="display: block">ユーザー名:</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                required
+                style="width: 750px"
+              />
+            </div>
+            <div style="margin: 10px 0">
+              <label for="password" style="display: block">パスワード:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                style="width: 750px"
+              />
+            </div>
+            <div style="margin: 10px 0">
+              <button
+                type="submit"
+                style="display: block; margin: auto; width: 100px"
+              >
+                ログイン
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
     </main>
   </body>
