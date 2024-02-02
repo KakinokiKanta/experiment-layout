@@ -11,11 +11,7 @@
         width: 800px; margin: 0;
         padding: 0;
       }
-    </style>
-  </head>
-  <body>
-    <header
-      style="
+      header {
         position: absolute;
         display: flex;
         top: 0;
@@ -29,47 +25,95 @@
         font-weight: bold;
         overflow: hidden;
         z-index: 1000;
-      "
-    >
+      }
+      nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        font-size: 20px;
+      }
+      input {
+        width: 700px;
+      }
+      button {
+        display: block;
+        margin: auto;
+        width: 100px;
+      }
+      footer {
+        background-color: #333;
+        position: relative;
+        margin-top: 100px;
+        padding: 100px;
+        color: #fff;
+      }
+
+      .navRef {
+        margin: 10px;
+        text-decoration: none;
+        color: #fff;
+      }
+      .containerList {
+        position: relative;
+        top: 100px;
+        padding-bottom: 50px;
+      }
+      .container {
+        position: relative;
+        width: 600px;
+        margin: 50px 20px;
+        padding: 30px 20px;
+        background-color: #fff;
+        border-top: solid 2px #555;
+        border-bottom: solid 2px #555;
+      }
+      .loginContainer {
+        height: 190px;
+        overflow: hidden;
+      }
+      .linksContainer {
+        white-space: nowrap;
+      }
+      .title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 30px;
+      }
+      .footerTitle {
+        white-space: nowrap;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .footerLink {
+        margin: 20px;
+        text-decoration: none;
+        color: #fff;
+      }
+      .footerContainer {
+        height: 120px;
+        overflow: hidden;
+      }
+      .footerList {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
       <div style="white-space: nowrap">有留大学 受講科目登録</div>
       <div style="padding: 0 115px"></div>
-      <nav
-        style="
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          font-size: 20px;
-        "
-      >
-        <a href="https://aridome-university.com/register" style="margin: 10px; text-decoration: none; color: #fff">コース登録</a>
-        <a href="https://aridome-university.com/list" style="margin: 10px; text-decoration: none; color: #fff">登録可能科目一覧</a>
-        <a href="https://aridome-university.com/check" style="margin: 10px; text-decoration: none; color: #fff">取得単位確認</a>
+      <nav>
+        <a href="https://aridome-university.com/register" class="navRef">コース登録</a>
+        <a href="https://aridome-university.com/list" class="navRef">登録可能科目一覧</a>
+        <a href="https://aridome-university.com/check" class="navRef">取得単位確認</a>
       </nav>
     </header>
     <main style="width: 100%">
-      <div style="position: relative; top: 100px; padding-bottom: 50px">
-        <div
-          style="
-            position: relative;
-            width: 600px;
-            height: 190px;
-            margin: 50px 20px;
-            padding: 30px 20px;
-            background-color: #fff;
-            border-top: solid 2px #555;
-            border-bottom: solid 2px #555;
-            overflow: hidden;
-          "
-        >
-          <div
-            style="
-              position: relative;
-              display: flex;
-              align-items: center;
-              height: 30px;
-            "
-          >
+      <div class="containerList">
+        <div class="container loginContainer">
+          <div class="title">
             <img
               src="./img/login.png"
               alt="アイコン"
@@ -86,7 +130,6 @@
                 id="username"
                 name="username"
                 required
-                style="width: 700px"
               />
             </div>
             <div style="margin: 10px 0">
@@ -96,42 +139,20 @@
                 id="password"
                 name="password"
                 required
-                style="width: 700px"
               />
             </div>
             <p>
               *公共の場所などで用意されたフリーWi-Fiでのログインは非推奨としています。また、それでもログインされる場合には、使用後のログアウトをお願いします。
             </p>
             <div style="margin-top: 30px">
-              <button
-                type="submit"
-                style="display: block; margin: auto; width: 100px"
-              >
+              <button type="submit">
                 ログイン
               </button>
             </div>
           </form>
         </div>
-        <div
-          style="
-            position: relative;
-            width: 600px;
-            margin: 50px 20px;
-            padding: 30px 20px;
-            background-color: #fff;
-            border-top: solid 2px #555;
-            border-bottom: solid 2px #555;
-            white-space: nowrap;
-          "
-        >
-          <div
-            style="
-              position: relative;
-              display: flex;
-              align-items: center;
-              height: 30px;
-            "
-          >
+        <div class="container linksContainer">
+          <div class="title">
             <h2 style="position: absolute">各種リンク</h2>
           </div>
           <ul style="overflow-x: hidden">
@@ -167,26 +188,8 @@
             </li>
           </ul>
         </div>
-        <div
-          style="
-            position: relative;
-            width: 600px;
-            margin: 0 20px;
-            padding: 30px 20px;
-            background-color: #fff;
-            border-top: solid 2px #555;
-            border-bottom: solid 2px #555;
-            white-space: nowrap;
-          "
-        >
-          <div
-            style="
-              position: relative;
-              display: flex;
-              align-items: center;
-              height: 30px;
-            "
-          >
+        <div  class="container linksContainer">
+          <div class="title">
             <img src="./img/aq.png" alt="アイコン" width="30px" height="30px" />
             <h2 style="position: absolute">お問い合わせ</h2>
           </div>
@@ -222,7 +225,6 @@
                 id="guestname"
                 name="guestname"
                 required
-                style="width: 700px"
               />
             </div>
             <div style="margin: 10px 0">
@@ -232,7 +234,6 @@
                 id="mail"
                 name="mail"
                 required
-                style="width: 700px"
               />
             </div>
             <div style="margin: 10px 0">
@@ -241,15 +242,12 @@
                 type="q&a"
                 id="q&a"
                 name="q&a"
-                cols="100"
+                cols="70"
                 rows="10"
               ></textarea>
             </div>
             <div style="margin-top: 30px">
-              <button
-                type="submit"
-                style="display: block; margin: auto; width: 100px"
-              >
+              <button type="submit">
                 お問い合わせの送信
               </button>
             </div>
@@ -257,21 +255,23 @@
         </div>
       </div>
     </main>
-    <footer style="background-color: #333; position: relative; margin-top: 100px; padding: 100px; color: #fff">
-      <div>
-        <div style="white-space: nowrap; font-size: 25px; font-weight: bold;">有留大学</div>
+    <footer>
+      <div class="footerContainer">
+        <div>
+          <div class="footerTitle">有留大学 <br> 受講科目登録</div>
+        </div>
+        <ul class="footerList">
+          <li>
+            <a href="https://aridome-university.com/register" class="footerLink">コース登録</a>
+          </li>
+          <li>
+            <a href="https://aridome-university.com/list" class="footerLink">登録可能科目一覧</a>
+          </li>
+          <li>
+            <a href="https://aridome-university.com/check" class="footerLink">取得単位確認</a>
+          </li>
+        </ul>
       </div>
-      <ul style="list-style: none">
-        <li>
-          <a href="https://aridome-university.com/register" style="margin: 20px; text-decoration: none; color: #fff">コース登録</a>
-        </li>
-        <li>
-          <a href="https://aridome-university.com/list" style="margin: 20px; text-decoration: none; color: #fff">登録可能科目一覧</a>
-        </li>
-        <li>
-          <a href="https://aridome-university.com/check" style="margin: 20px; text-decoration: none; color: #fff">取得単位確認</a>
-        </li>
-      </ul>
     </footer>
   </body>
 </html>
