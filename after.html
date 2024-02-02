@@ -34,12 +34,13 @@
         font-size: 20px;
       }
       input {
-        width: 700px;
+        width: 100%;
       }
       button {
         display: block;
         margin: auto;
-        width: 100px;
+        padding: 5px 30px;
+        width: 200px;
       }
       footer {
         background-color: #333;
@@ -61,8 +62,8 @@
       }
       .container {
         position: relative;
-        width: 600px;
-        margin: 50px 20px;
+        width: 700px;
+        margin: 50px auto;
         padding: 30px 20px;
         background-color: #fff;
         border-top: solid 2px #555;
@@ -72,14 +73,17 @@
         height: 190px;
         overflow: hidden;
       }
-      .linksContainer {
-        white-space: nowrap;
+      .linkContainer {
+        height: 200px;
       }
       .title {
         position: relative;
         display: flex;
         align-items: center;
         height: 30px;
+      }
+      .icon {
+        margin-right: 20px;
       }
       .footerTitle {
         white-space: nowrap;
@@ -119,8 +123,9 @@
               alt="アイコン"
               width="30px"
               height="30px"
+              class="icon"
             />
-            <h2 style="position: absolute">ログインフォーム</h2>
+            <h2 style="position: relative">ログインフォーム</h2>
           </div>
           <form action="https://hoge-hoge-hoge.com" method="post">
             <div style="margin: 10px 0">
@@ -151,17 +156,18 @@
             </div>
           </form>
         </div>
-        <div class="container linksContainer">
+        <div class="container linkContainer">
           <div class="title">
             <img
               src="./img/link.png"
               alt="アイコン"
               width="30px"
               height="30px"
+              class="icon"
             />
-            <h2 style="position: absolute">各種リンク</h2>
+            <h2 style="position: relative">各種リンク</h2>
           </div>
-          <ul style="overflow-x: hidden">
+          <ul>
             <li>
               <a href="https://hoge-hoge-hoge.com/policy">本システムについてはこちら</a>
             </li>
@@ -187,31 +193,26 @@
                 </a>
               </li>
             </ul>
-            <li>
-              <a href="https://aridome-home.com">
-                有留大学情報基盤センター
-              </a>
-            </li>
           </ul>
         </div>
-        <div  class="container linksContainer">
+        <div  class="container">
           <div class="title">
-            <img src="./img/aq.png" alt="アイコン" width="30px" height="30px" />
-            <h2 style="position: absolute">お問い合わせ</h2>
+            <img src="./img/aq.png" alt="アイコン" width="30px" height="30px" class="icon" />
+            <h2 style="position: relative">お問い合わせ</h2>
           </div>
-          <p style="overflow-x: hidden">
+          <p>
             ご不明点やご要望がございましたら、お気軽にお問合せください。ただし、お問い合わせいただく前に、以下の注意事項をご確認いただきますようお願いいたします。
           </p>
           <h3>お問い合わせ時の規約</h3>
-          <ul style="overflow-x: hidden">
+          <ul>
             <li>お問い合わせする際には、下記項目を必須項目としています。</li>
             <ul>
               <li>お名前</li>
-              <li>メールアドレス</li>
+              <li>メールアドレス (電話番号でも可)</li>
               <li>問い合わせ事項</li>
             </ul>
             <li>
-              お問い合わせいただいた内容には、原則として3営業日以内に返信いたします。ただし、お問い合わせの内容や状況によっては、返信に時間がかかる場合がございますので、予めご了承ください。
+              お問い合わせいただいた内容には、原則として3営業日以内に返信いたします。ただし、お問い合わせの内容や状況によっては、返信に時間がかかる場合がございますので、予めご了承ください。なお、緊急を要する連絡の場合は、直接大学にお電話ください。
             </li>
             <li>
               個人情報の取り扱いに関するポリシーにつきましては、
@@ -254,7 +255,7 @@
             </div>
             <div style="margin-top: 30px">
               <button type="submit">
-                お問い合わせの送信
+                お問い合わせ送信
               </button>
             </div>
           </form>
